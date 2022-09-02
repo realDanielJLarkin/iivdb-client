@@ -1,0 +1,37 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --rad: .7rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #57bd84;
+    --font-fam: 'Lato', sans-serif;
+    --height: 5rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+
+span {
+    display: block;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logo-top {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.logo-bottom {
+    font-size: 2rem;
+}
+
+.logo-home {
+    cursor: pointer;
+}
+
+.zPosition {
+    z-index: 0;
+} */
