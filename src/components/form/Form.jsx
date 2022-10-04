@@ -7,11 +7,13 @@ import { FaSearch } from 'react-icons/fa'
 
 import Input from '../Input/Input'
 
-import logo from '../../logo.png'
+import logo from '../../centered.png'
 
 import '../styles/form/form.css'
 import LoggedIn from './buttons/LoggedIn'
 import Logout from './buttons/Logout'
+
+import './form.css'
 
 
 function Form() {
@@ -22,13 +24,13 @@ function Form() {
 
     return (
         <div className="navbar bg-base-100">
-            <div className="navbar-start">
-                <Link to='/'><img src={logo} alt="" /></Link>
+            <div className="navbar-center">
+                <Link to='/'><img src={logo} alt="" className='custom-logo' /></Link>
 
             </div>
-            <div className="navbar-end">
+            {/* <div className="navbar-end">
                 {currentUser ? <Logout /> : <LoggedIn />}
-            </div>
+            </div> */}
         </div>
 
     )
