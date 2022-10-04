@@ -37,7 +37,7 @@ export const updateViewCount = async (videoID) => {
         const { data } = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&id=${videoID}&key=${apiKey}`)
         const views = data.items[0].statistics.viewCount
 
-        api.updateViews(videoID, views)
+        // api.updateViews(videoID, views)
         return views
     } catch (error) {
         console.log('error updating views', error)

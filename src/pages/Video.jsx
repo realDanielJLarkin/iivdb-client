@@ -1,35 +1,40 @@
 import { useLocation, useParams } from 'react-router-dom'
-import { updateViewCount } from '../actions/videos'
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import NumberFormat from 'react-number-format'
-import Videos from '../components/videos/Videos'
 import { findVideo } from '../actions/videos'
-import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
-import { FaRegThumbsUp, FaRegThumbsDown } from 'react-icons/fa'
+import { updateViewCount } from '../actions/videos'
 
-import './styles/video.css'
-import Stats from '../components/stats/Stats'
-import Input from '../components/Input/Input'
-import SponsoredVideos from '../components/sponsoredVideos/SponsoredVideos'
+
+
 import Info from '../components/info/Info'
 import Vote from '../components/vote/Vote'
+
+import './styles/video.css'
 
 
 
 function Video() {
-    const navigate = useNavigate()
+
     const dispatch = useDispatch()
     const params = useParams()
-    const location = useLocation()
     const data = useLocation((state) => state.video)
+    const { currentUser } = useAuth()
     const [loading, setLoading] = useState(true)
     const [video, setVideo] = useState({})
-    const [views, setViews] = useState()
-    const [likes, setLikes] = useState()
-    const [dislikes, setDislikes] = useState()
+    const [signedIn, setSignedIn] = useState(currentUser)
+    const [views, setViews] = useState(0)
+
+
+
+    useEffect(() => {
+        async function fetchViews() {
+            const data = await updateViewCount(params.id)
+            setViews(data)
+        }
+        fetchViews()
+    }, [])
 
 
 
@@ -44,7 +49,6 @@ function Video() {
     const checkData = async (id) => {
         if (data.state) {
             setVideo(data.state.video)
-            console.log('test')
             return
         } else {
             const videoData = await dispatch(findVideo(id))
@@ -95,9 +99,8 @@ function Video() {
                             <h2 className='card-title'>{video.title}</h2>
                             <p className='card-title'>- {video.channel}</p>
                         </div>
-                        <Info views={video.views} likes={video.likes} dislikes={video.dislikes} />
-                        <Vote />
-
+                        <Info views={views} likes={video.likes} dislikes={video.dislikes} />
+                        <Vote signedIn={signedIn} />
                     </div>
 
 

@@ -43,6 +43,12 @@ function Signup() {
         }
     }, [currentUser])
 
+    const loginClicked = () => {
+        dispatch({ type: 'SIGNUP_CLOSE' })
+        dispatch({ type: 'LOGIN_OPEN' })
+
+    }
+
     const closeSignup = () => {
         dispatch({ type: 'SIGNUP_CLOSE' })
     }
@@ -76,7 +82,7 @@ function Signup() {
                                 </div>
                                 <button className='btn text-white bg-green-500 border-none w-64 mt-3 mb-5' onClick={submitHandler} disabled={loading}>Sign Up</button>
                                 <div className="flex w-64 mb-5">
-                                    <p className='text-gray-400'>Alreday have an account? <Link to='/login' className='text-green-500'>Login</Link> </p>
+                                    <p className='text-gray-400' >Alreday have an account? <span onClick={loginClicked} className='text-green-500 cursor-pointer'>Login</span> </p>
                                 </div>
                             </div>
                         </div>
