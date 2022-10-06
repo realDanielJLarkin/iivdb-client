@@ -25,13 +25,12 @@ function Form() {
 
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 mb-10">
                 <div className="navbar-center">
                     <Link to='/'><img src={logo} alt="" className='custom-logo' /></Link>
-
                 </div>
-
             </div>
+
 
             {currentUser && <div className="logout-button"><Logout /></div>}
 
