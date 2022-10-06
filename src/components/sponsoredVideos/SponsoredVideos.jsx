@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 import './sponsored.css'
 
-function SponsoredVideos({ video }) {
+function SponsoredVideos({ video, }) {
     const navigate = useNavigate()
 
     const handleClick = () => {
@@ -22,7 +22,7 @@ function SponsoredVideos({ video }) {
                 <h2 className="card-title mb-3">{video.title}</h2>
 
                 <div className="card-actions flex space-x-4 md:space-x-3">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn bg-red-700 border-none">Watch on Youtube</a>
+                    <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" className="btn bg-red-700 border-none">Watch on Youtube</a>
                     <button className="btn btn-ghost" onClick={handleClick}>Show Stats</button>
 
                 </div>

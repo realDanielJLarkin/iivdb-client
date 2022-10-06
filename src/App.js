@@ -69,7 +69,7 @@ function App() {
 
           <div className='max-w-5xl mx-auto'>
             <Form />
-            <main className='mb-20'>
+            <main className='mb-20 z-18'>
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/videos/:id' element={<Video />} />

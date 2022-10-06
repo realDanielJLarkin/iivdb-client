@@ -30,9 +30,11 @@ function Input() {
     const checkUrl = (url) => {
         if (url) {
             if (url.includes('v=') && url.includes('youtube.com')) {
-                const videoId = url.slice(20)
-                console.log(videoId)
-                checkDatabase(videoId)
+                const sliced = url.slice(32)
+                if (sliced.includes('&list')) {
+                    const videoId = sliced.split('&list')[0]
+                    checkDatabase(videoId)
+                }
             } else if (url.includes('youtu.be')) {
                 const videoId = url.slice(17)
                 console.log(videoId)
