@@ -21,9 +21,10 @@ function SponsoredVideos({ video }) {
             <div className="card-body ml-3 lg:ml-0 lg:px-0">
                 <h2 className="card-title mb-3">{video.title}</h2>
 
-                <div className="card-actions">
-                    <button className="btn btn-warning" onClick={handleClick}>Show Stats</button>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn btn-ghost">Watch on Youtube</a>
+                <div className="card-actions flex space-x-4 md:space-x-3">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn bg-red-700 border-none">Watch on Youtube</a>
+                    <button className="btn btn-ghost" onClick={handleClick}>Show Stats</button>
+
                 </div>
             </div>
         </div>

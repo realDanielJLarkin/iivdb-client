@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .custom-logo {
     height: 94.75px;
     width: 379px;
@@ -6,4 +8,10 @@
 .custom-nav {
     justify-content: space-between;
     align-items: center;
+}
+
+.custom-logo-title {
+    margin: auto;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bolder;
 }

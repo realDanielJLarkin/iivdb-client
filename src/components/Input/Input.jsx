@@ -98,7 +98,7 @@ function Input() {
             <div className="relative">
                 <form onSubmit={handleSubmit}>
                     <input type="text" onChange={(e) => setVideoUrl({ url: e.target.value })} placeholder="Enter Youtube Video URL" class="ml-8 w-50 pr-16 input input-danger input-bordered rounded-r-none md:rounded-r md:w-full md:ml-0" />
-                    <button className=" top-0 right-0 rounded-l-none btn btn-warning md:absolute" type='submit'>Search</button>
+                    <button className=" top-0 right-0 rounded-l-none btn bg-white text-black border-gray-300 md:absolute" type='submit'>Search</button>
                 </form>
             </div>
         </div>

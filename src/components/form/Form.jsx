@@ -25,9 +25,9 @@ function Form() {
 
     return (
         <>
-            <div className="navbar bg-base-100 mb-10">
-                <div className="navbar-center">
-                    <Link to='/'><img src={logo} alt="" className='custom-logo' /></Link>
+            <div className="navbar mb-10 text-center justify-center flex bg-gray-800 text-white p-4 sticky top-0 md:relative z-20 md:bg-white md:text-gray-800">
+                <div className="navbar-center flex-1">
+                    <p className='text-5xl custom-logo-title uppercase'>The Informed Viewer</p>
                 </div>
             </div>
 

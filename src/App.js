@@ -66,8 +66,9 @@ function App() {
           {modalOpen && <Modal />}
           {signUp && <Signup />}
           {loginOpen && <Login />}
-          <Form />
+
           <div className='max-w-5xl mx-auto'>
+            <Form />
             <main className='mb-20'>
               <Routes>
                 <Route exact path='/' element={<Home />} />
