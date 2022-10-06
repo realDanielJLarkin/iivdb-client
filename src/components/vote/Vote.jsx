@@ -101,13 +101,13 @@ function Vote({ signedIn }) {
 
     return (
         <>
-            <h2 className='text-3xl mx-auto mt-10 custom-vote-title'>CAST YOUR VOTE:</h2>
+            <h2 className='text-3xl mx-auto mt-10 custom-vote-title uppercase'>Rate this Video:</h2>
             <div className='flex items-center mt-10 mb-10 space-x-10 mx-auto'>
                 <div className='btn btn-ghost text-5xl custom-vote-btn p-10 content-center' id='like' onClick={onClick} disabled={liked}>
-                    <span className='vote-icon like-button '><FaThumbsUp /></span>
+                    <span className='vote-icon text-green-600'><FaThumbsUp /></span>
                 </div>
                 <div className='btn btn-ghost text-5xl custom-vote-btn p-10 content-center' id='dislike' onClick={onClick} disabled={disliked}>
-                    <span className='vote-icon dislike-button text-error'><FaThumbsDown /></span>
+                    <span className='vote-icon dislike-button text-red-700'><FaThumbsDown /></span>
                 </div>
             </div>
         </>
