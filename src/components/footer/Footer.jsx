@@ -5,7 +5,7 @@ function Footer() {
         <div>
             <footer className="hidden sm:footer grid-rows-2 p-10 bg-neutral text-neutral-content">
 
-                <div>
+                {/* <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
@@ -45,7 +45,7 @@ function Footer() {
                     <a className="link link-hover">Windows</a>
                     <a className="link link-hover">iPhone</a>
                     <a className="link link-hover">Android</a>
-                </div>
+                </div> */}
 
             </footer>
         </div>

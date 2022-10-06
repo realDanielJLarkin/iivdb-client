@@ -8,7 +8,7 @@ function Home() {
     return (
         <div>
             <About />
-            <h1 className="text-3xl font-bold">Sponsored</h1>
+            <h1 className="text-3xl font-bold text-center mb-10">SPONSORED</h1>
             <Videos />
         </div>
     )

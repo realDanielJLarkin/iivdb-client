@@ -9,8 +9,8 @@ const Videos = () => {
     const videos = useSelector((state) => state.videos)
 
     return (
-        <div className='container'>
-            <div className="row">
+        <div className='container '>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {
                     videos.map((video) => (
                         <div className="">

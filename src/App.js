@@ -68,8 +68,7 @@ function App() {
           {loginOpen && <Login />}
           <div className='max-w-5xl mx-auto'>
             <Form />
-            <main className=''>
-
+            <main className='mb-20'>
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/videos/:id' element={<Video />} />

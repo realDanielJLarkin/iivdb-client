@@ -14,6 +14,7 @@ import LoggedIn from './buttons/LoggedIn'
 import Logout from './buttons/Logout'
 
 import './form.css'
+import './buttons/buttons.css'
 
 
 function Form() {
@@ -23,15 +24,18 @@ function Form() {
 
 
     return (
-        <div className="navbar bg-base-100">
-            <div className="navbar-center">
-                <Link to='/'><img src={logo} alt="" className='custom-logo' /></Link>
+        <>
+            <div className="navbar bg-base-100">
+                <div className="navbar-center">
+                    <Link to='/'><img src={logo} alt="" className='custom-logo' /></Link>
+
+                </div>
 
             </div>
-            {/* <div className="navbar-end">
-                {currentUser ? <Logout /> : <LoggedIn />}
-            </div> */}
-        </div>
+
+            {currentUser && <div className="logout-button"><Logout /></div>}
+
+        </>
 
     )
 }

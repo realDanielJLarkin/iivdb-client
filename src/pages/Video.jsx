@@ -89,15 +89,15 @@ function Video() {
         <>
             {/* <Input /> */}
             {!loading &&
-                <div className="flex max-w-4xl flex-col text-center">
-                    <h1 className='sentiment-meter mt-10'>82% - Mostly Positive</h1>
+                <div className="flex max-w-5xl flex-col text-center">
+
                     <div className='card text-left shadow-2xl mt-10 mb-10'>
                         <figure className='px-10 pt-10'>
                             <img src={video.maxresthumbnail} alt="" height={1000} width={1000} />
                         </figure>
                         <div className="card-body px-10">
                             <h2 className='card-title'>{video.title}</h2>
-                            <p className='card-title'>- {video.channel}</p>
+                            <p className='card-title text-gray-500'>- {video.channel}</p>
                         </div>
                         <Info views={views} likes={video.likes} dislikes={video.dislikes} />
                         <Vote signedIn={signedIn} />

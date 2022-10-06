@@ -1,3 +1,8 @@
-.no-radius {
-    border-radius: 5px;
+.custom-card {
+    border-radius: 0%;
+    /* border: 1px solid black; */
+}
+
+.custom-card img {
+    margin-top: 1px;
 }

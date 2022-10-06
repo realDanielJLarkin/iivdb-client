@@ -9,8 +9,8 @@ function Logout() {
     }
 
     return (
-        <ul className="menu menu-horizontal p-0">
-            <li><Link to='#' onClick={logoutClicked}>Logout</Link></li>
+        <ul className="menu menu-horizontal p-0 btn btn-ghost">
+            <li><Link to='#' onClick={logoutClicked}>Log Out</Link></li>
 
         </ul>
     )

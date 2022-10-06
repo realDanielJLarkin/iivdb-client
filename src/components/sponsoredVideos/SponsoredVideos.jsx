@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom"
 
+import './sponsored.css'
+
 function SponsoredVideos({ video }) {
     const navigate = useNavigate()
 
@@ -12,18 +14,16 @@ function SponsoredVideos({ video }) {
     }
 
     return (
-        <div className=''>
-            <div className="card lg:card-side  mb-10 ">
-                <figure className=''>
-                    <img src={video.thumbnail} />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">{video.title}</h2>
-                    <p className='mb-10'>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p>
-                    <div className="card-actions">
-                        <button className="btn btn-warning" onClick={handleClick}>Show Stats</button>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn btn-ghost">Watch on Youtube</a>
-                    </div>
+        <div className="card mb-10 custom-card">
+            <figure>
+                <img src={video.thumbnail} />
+            </figure>
+            <div className="card-body ml-3 lg:ml-0 lg:px-0">
+                <h2 className="card-title mb-3">{video.title}</h2>
+
+                <div className="card-actions">
+                    <button className="btn btn-warning" onClick={handleClick}>Show Stats</button>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn btn-ghost">Watch on Youtube</a>
                 </div>
             </div>
         </div>
