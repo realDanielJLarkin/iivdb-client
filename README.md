@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Local Installation Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone repo
+2. Navigate to iivdb-client folder and run npm install
+3. Run 'npm run start' to start local dev server on localhost 3000
 
 ## Available Scripts
 
