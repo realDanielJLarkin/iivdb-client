@@ -33,6 +33,10 @@ function Input() {
                 const videoId = url.slice(20)
                 console.log(videoId)
                 checkDatabase(videoId)
+            } else if (url.includes('youtu.be')) {
+                const videoId = url.slice(17)
+                console.log(videoId)
+                checkDatabase(videoId)
             } else {
                 console.log('invalid')
             }
@@ -40,6 +44,7 @@ function Input() {
             console.log('no text')
         }
     }
+
 
     const checkDatabase = (videoID) => {
         setLoading('LOADING')
@@ -89,7 +94,7 @@ function Input() {
         navigate('/')
     }
     return (
-        <div className="form-control mb-20">
+        <div className="form-control mb-10">
             <div className="relative">
                 <form onSubmit={handleSubmit}>
                     <input type="text" onChange={(e) => setVideoUrl({ url: e.target.value })} placeholder="Enter Youtube Video URL" class="ml-8 w-50 pr-16 input input-danger input-bordered rounded-r-none md:rounded-r md:w-full md:ml-0" />

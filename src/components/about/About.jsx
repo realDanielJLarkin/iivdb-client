@@ -4,7 +4,7 @@ function HowItWorks() {
     return (
         <>
             <Input />
-            <div className="card bg-base-300 text-base-content mt-5 mb-10 p-10">
+            <div className=" hidden md:card bg-base-300 text-base-content mt-5 mb-10 p-10">
                 <div className="card-body">
                     <h5 className="card-title">About IIVDb</h5>
                     <p> The International Internet Video Database (IIVDb) exist to fill a need left by Youtube when it decided to permanently make dislikes invisible to general users. For many,
