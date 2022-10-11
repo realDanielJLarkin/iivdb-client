@@ -62,7 +62,6 @@ function App() {
     <div className=''>
       <Router>
         <AuthProvider>
-          {loading && <Loading />}
           {modalOpen && <Modal />}
           {signUp && <Signup />}
           {loginOpen && <Login />}

@@ -68,15 +68,15 @@ function Modal() {
                 <div className="modalClose">
                     <button onClick={closeModal}>X</button>
                 </div>
-                <div className='modalHeader'>
-                    <h1 className='text-3xl font-bold'>You're the first!</h1>
+                <div className='modalHeader text-center'>
+                    <h1 className='text-3xl font-bold uppercase'>You're the first!</h1>
                 </div>
                 <div className="modalBody">
-                    <p className='text-2xl font-light'>This video does not yet exist in our database, would you like to add it?</p>
+                    <p className='text-2xl font-light card-body'>This video does not yet exist in our database, would you like to add it?</p>
                 </div>
                 <div className="modalFooter">
-                    <button onClick={handleContinue} className='btn btn-primary text-bold'>Yes!</button>
-                    <button onClick={closeModal} id='cancel' className='btn'>No</button>
+                    <button onClick={handleContinue} className='btn btn-ghost text-bold'>Yes!</button>
+                    <button onClick={closeModal} id='cancel' className='btn bg-red-700'>No</button>
                 </div>
             </div>
         </div>

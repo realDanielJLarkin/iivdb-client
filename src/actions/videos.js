@@ -4,12 +4,14 @@ import * as api from '../api'
 const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY
 
 export const getVideos = () => async (dispatch) => {
+    dispatch({ type: 'LOADING' })
     try {
         const { data } = await api.fetchVideos()
         dispatch({ type: 'FETCH_TOP', payload: data })
     } catch (error) {
         console.log(error.message)
     }
+    dispatch({ type: 'NOT_LOADING' })
 }
 
 export const createVideo = (video) => async (dispatch) => {

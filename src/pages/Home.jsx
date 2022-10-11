@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext'
 
 import Videos from '../components/videos/Videos'
 import About from '../components/about/About'
+import Spinner from '../components/spinner/Spinner'
 
 function Home() {
     return (
