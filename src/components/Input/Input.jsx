@@ -34,6 +34,8 @@ function Input() {
                 if (sliced.includes('&list')) {
                     const videoId = sliced.split('&list')[0]
                     checkDatabase(videoId)
+                } else {
+                    checkDatabase(sliced)
                 }
             } else if (url.includes('youtu.be')) {
                 const videoId = url.slice(17)
