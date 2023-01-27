@@ -1,16 +1,9 @@
-import { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { createVideo } from '../../actions/videos'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
-import { FaSearch } from 'react-icons/fa'
 
-import Input from '../Input/Input'
-
-import logo from '../../centered.png'
 
 import '../styles/form/form.css'
-import LoggedIn from './buttons/LoggedIn'
+
 import Logout from './buttons/Logout'
 
 import './form.css'

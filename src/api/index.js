@@ -1,7 +1,9 @@
 import axios from 'axios'
 
-const url = process.env.REACT_APP_AXIOS_HEROKU
+const url = process.env.REACT_APP_AXIOS_RAILWAY
 const API = axios.create({ baseURL: url })
+
+console.log(API)
 
 export const fetchVideos = () => API.get('/videos')
 export const getVideo = (id) => API.get(`/videos/${id}`)

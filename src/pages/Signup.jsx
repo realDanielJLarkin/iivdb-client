@@ -1,11 +1,10 @@
 import { useRef, useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useDispatch } from 'react-redux'
 
 import Error from '../components/alerts/error/Error'
 
-import { FaFacebookF, FaGoogle, FaTwitter, FaRegEnvelope, FaLock } from 'react-icons/fa'
+import { FaRegEnvelope, FaLock } from 'react-icons/fa'
 
 import '../pages/styles/login/login.css'
 

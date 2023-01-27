@@ -37,11 +37,6 @@ function App() {
   const [loginOpen, setLoginOpen] = useState(false)
   const [signUp, setSignup] = useState(false)
 
-
-
-
-
-
   useEffect(() => {
     dispatch(getVideos())
   }, [dispatch])
