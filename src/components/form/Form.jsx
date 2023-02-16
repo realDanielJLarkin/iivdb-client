@@ -13,9 +13,6 @@ import './buttons/buttons.css'
 function Form() {
     const { currentUser } = useAuth()
 
-
-
-
     return (
         <>
             <div className="navbar mb-10 text-center justify-center flex bg-gray-800 text-white p-4 sticky top-0 md:relative z-20 md:bg-white md:text-gray-800">

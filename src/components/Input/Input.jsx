@@ -29,25 +29,38 @@ function Input() {
 
     const checkUrl = (url) => {
         if (url) {
-            if (url.includes('v=') && url.includes('youtube.com')) {
-                const sliced = url.slice(32)
-                if (sliced.includes('&list')) {
-                    const videoId = sliced.split('&list')[0]
-                    checkDatabase(videoId)
-                } else {
-                    checkDatabase(sliced)
-                }
-            } else if (url.includes('youtu.be')) {
-                const videoId = url.slice(17)
-                console.log(videoId)
+            const regex = /^(?:https?:\/\/)?(?:www\.)?(?:m\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(?:\S+)?$/
+            const match = url.match(regex)
+            if (match) {
+                const videoId = match[1];
                 checkDatabase(videoId)
             } else {
-                console.log('invalid')
+                console.log('not youtube id')
             }
-        } else {
-            console.log('no text')
         }
     }
+
+    // const checkUrl = (url) => {
+    //     if (url) {
+    //         if (url.includes('v=') && url.includes('youtube.com')) {
+    //             const sliced = url.slice(32)
+    //             if (sliced.includes('&list')) {
+    //                 const videoId = sliced.split('&list')[0]
+    //                 checkDatabase(videoId)
+    //             } else {
+    //                 checkDatabase(sliced)
+    //             }
+    //         } else if (url.includes('youtu.be')) {
+    //             const videoId = url.slice(17)
+    //             console.log(videoId)
+    //             checkDatabase(videoId)
+    //         } else {
+    //             console.log('invalid')
+    //         }
+    //     } else {
+    //         console.log('no text')
+    //     }
+    // }
 
 
     const checkDatabase = (videoID) => {
